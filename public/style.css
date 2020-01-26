@@ -1,15 +1,30 @@
+:root {
+    --primary : #673ab7;
+    --plight : #9a67ea;
+    --pdark : #320b86;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #232323;
+    background-color: var(--pdark);
 }
 
-h1 {
-    color: darkslategray;
-    text-align: center;
+#navbar {
+    border: 2px solid black;
+    height: 50px;
+    background-color: var(--plight);
+    position: relative;
+}
+
+#navbar > p {
+
+    color: whitesmoke;
+    margin-left: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    font-size: 1.8em;
     text-transform: uppercase;
-}
-
-h3 {
-    text-align: center;
+    font-weight: bolder;
+    position: absolute;
+    top: -20px;
 }
