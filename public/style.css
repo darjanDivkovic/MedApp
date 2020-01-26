@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #232323;
+}
+
+h1 {
+    color: darkslategray;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-align: center;
+}
