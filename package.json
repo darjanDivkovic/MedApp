@@ -1,0 +1,26 @@
+{
+  "name": "medapp",
+  "version": "1.0.0",
+  "description": "Medicine tracking app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darjanDivkovic/MedApp.git"
+  },
+  "keywords": [
+    "!"
+  ],
+  "author": "Darjan Divković 2k20",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darjanDivkovic/MedApp/issues"
+  },
+  "homepage": "https://github.com/darjanDivkovic/MedApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
