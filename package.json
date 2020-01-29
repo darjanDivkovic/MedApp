@@ -22,6 +22,7 @@
   "homepage": "https://github.com/darjanDivkovic/MedApp#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mustache-express": "^1.3.0"
+    "mustache-express": "^1.3.0",
+    "pg": "^7.17.1"
   }
 }
