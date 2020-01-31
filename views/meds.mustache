@@ -3,5 +3,17 @@
     </head>
     <body>
         <h1>This is the page that displays Meds<h1>
+
+
+            <table>
+            {{#rows}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{count}}</td>
+                </tr>
+            {{/rows}}
+            </table>
+    
     </body>
 </html>

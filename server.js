@@ -3,6 +3,7 @@ const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const { Client } = require('pg');
 
+
 const app = express();
 const mustache = mustacheExpress();
 mustache.cache = null;
@@ -12,8 +13,30 @@ app.set('view engine', 'mustache');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
 
+
+
 app.get('/meds', (req,res)=> {
-    res.render('meds');
+    
+    const client = new Client({
+
+        user: 'postgres',
+        host: 'localhost',
+        database: 'medical',
+        password: 'darjan1234',
+        port: 5432
+    
+    });
+
+    client.connect()
+        .then(()=> {
+            return client.query('SELECT * FROM meds');
+        })
+        .then((results)=>{
+            console.log(results);
+            res.render('meds', results);
+        })
+        
+    
 });
 
 app.get('/add', (req,res)=>{
@@ -21,7 +44,6 @@ app.get('/add', (req,res)=>{
 });
 
 app.post('/meds/add', (req,res)=>{
-    console.log('post body', req.body);
     res.redirect('/meds');
 
     const client = new Client({
@@ -31,7 +53,7 @@ app.post('/meds/add', (req,res)=>{
         database: 'medical',
         password: 'darjan1234',
         port: 5432
-
+    
     });
 
     client.connect()
@@ -44,6 +66,7 @@ app.post('/meds/add', (req,res)=>{
         .then((result)=> {
             res.redirect('/meds');
         });
+        
 })
 
 app.listen(1502, ()=> {
