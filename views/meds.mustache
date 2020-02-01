@@ -10,10 +10,15 @@
                     <td>{{id}}</td>
                     <td>{{name}}</td>
                     <td>{{count}}</td>
+            
                     <td>
                         <form action="/meds/delete/{{id}}" method="post">
                             <button type="submit">delete</button>
                         </form>
+                    </td>
+
+                    <td>
+                        <a href="/meds/edit/{{id}}">edit</a>
                     </td>
                 </tr>
             {{/rows}}

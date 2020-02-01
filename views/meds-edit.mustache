@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Med App</title>
+       
+    </head>
+    <body>
+      <h1>This is the edit meds page</h1>
+
+
+      <form action="/meds/edit/{{med.id}}" method="post">
+        <input type="text" name="name" value="{{med.name}}">
+        <input type="text" name="count" value="{{med.count}}">
+        <button type="submit">Save</button>
+      </form>
+
+    </body>
+</html>

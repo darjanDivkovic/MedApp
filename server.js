@@ -32,7 +32,6 @@ app.get('/meds', (req,res)=> {
             return client.query('SELECT * FROM meds');
         })
         .then((results)=>{
-            console.log(results);
             res.render('meds', results);
         })
         
@@ -58,7 +57,7 @@ app.post('/meds/add', (req,res)=>{
 
     client.connect()
         .then(()=> {
-            console.log('We are in boys!');
+    
             const query = 'INSERT INTO meds(name,count) VALUES($1, $2)';
             const params = [req.body.name, req.body.count];
             return client.query(query,params);
@@ -91,6 +90,29 @@ app.post('/meds/delete/:id', (req,res)=>{
         .then((result)=> {
             res.redirect('/meds');
         })
+});
+
+app.get('/meds/edit/:id', (req,res)=> {
+
+    const client = new Client({
+
+        user: 'postgres',
+        host: 'localhost',
+        database: 'medical',
+        password: 'darjan1234',
+        port: 5432
+    
+    });
+
+    client.connect()
+        .then(()=> {
+            const query = 'SELECT * FROM meds WHERE id=$1';
+            const params = [req.params.id];
+            return client.query(query,params);
+        })
+        .then((result)=> {
+            res.render('meds-edit', {med:result.rows[0]});
+        });
 });
 
 app.listen(1502, ()=> {
