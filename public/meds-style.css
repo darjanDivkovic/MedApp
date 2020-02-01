@@ -39,7 +39,12 @@ button {
     font-size: 1em;
     margin-top: 10px;
     cursor: pointer;
-   
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 a {
@@ -49,5 +54,11 @@ a {
 
 #yel {
     border: 4px solid #E9D46E;
+    transition: 0.5s;
+}
+
+#yel:hover {
+    background-color: #E9D46E;
+    
 }
 
