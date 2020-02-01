@@ -115,6 +115,28 @@ app.get('/meds/edit/:id', (req,res)=> {
         });
 });
 
+app.post('/meds/edit/:id', (req,res)=>{
+    const client = new Client({
+
+        user: 'postgres',
+        host: 'localhost',
+        database: 'medical',
+        password: 'darjan1234',
+        port: 5432
+    
+    });
+
+    client.connect()
+        .then(()=> {
+            const query = 'UPDATE meds SET name=$1, count=$2 WHERE id=$3';
+            const params = [req.body.name, req.body.count, req.params.id];
+            return client.query(query,params);
+        })
+        .then((result)=> {
+            res.redirect('/meds');
+        });
+});
+
 app.listen(1502, ()=> {
     console.log('Listening to port 1502.');
 });
