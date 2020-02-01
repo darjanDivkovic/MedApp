@@ -21,3 +21,11 @@ h1 {
     margin-right: auto;
     width: 80%;
 }
+
+td {
+    font-size: 24px;
+}
+
+#med-name {
+    font-weight: bolder;
+}

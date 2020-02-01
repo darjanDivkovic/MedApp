@@ -7,10 +7,12 @@
         <h1>Currently available medicine shows here.<h1>
         <div id="meds-table-container">
             <table>
+                
             {{#rows}}
+                
                 <tr>
                     <td>{{id}}</td>
-                    <td>{{name}}</td>
+                    <td id="med-name">{{name}}</td>
                     <td>{{count}}</td>
             
                     <td>
