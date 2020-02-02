@@ -3,6 +3,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/06/medical-02.jpg');
 }
 
 h1 {
@@ -60,6 +61,7 @@ a {
 
 
 button {
+
     height: 39px;
     width: 120px;
     margin-top: 20px;
@@ -70,7 +72,7 @@ button {
     color: #f56d58;
     transition: 0.5s;
     font-size: 0.6em;
-    
+    cursor: pointer;
 }
 
 button:hover {
@@ -89,6 +91,7 @@ a {
     color: #2d5ff7;
     font-weight: bold;
     transition: 0.5s;
+    background-color: none;
 }
 
 a:hover {
