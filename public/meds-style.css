@@ -6,59 +6,53 @@ body {
 }
 
 h1 {
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: center;
-    font-size: 2.4em;
+    font-size: 3em;
+    color: #009879;
 }
+
+hr {
+    width: 85%;
+}
+
 
 #meds-table-container {
-    border: 2px solid black;
-    position: relative;
-}
-
-#meds-table-container > table {
+    border-collapse: collapse;
+    margin: 25px 0px;
+    font-size: 0.6em;
+    min-width: 80%;
+    font-family: sans-serif;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+   
 }
 
-td {
-    font-size: 24px;
-}
-
-#med-name {
-    font-weight: bolder;
-}
-
-button {
-    border: 4px solid #4CAF50;
-    border-radius: 4px;
-    background-color: none;
-    height: 50px;
-    width: 100px;
-    font-size: 1em;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-button:hover {
-    background-color: #4CAF50;
+#meds-table-container > thead tr {
+    background-color: #009879;
     color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+#meds-table-container > thead th,
+#meds-table-container > tbody td {
+    padding: 15px 12px;
+}
+
+#meds-table-container > tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+#meds-table-container > tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    padding: 0;
+    margin: 0;
 }
-
-#yel {
-    border: 4px solid #E9D46E;
-    transition: 0.5s;
-}
-
-#yel:hover {
-    background-color: #E9D46E;
-    
-}
-

@@ -5,11 +5,19 @@
     <body>
    
         <h1>Currently available medicine shows here.<h1>
-        <div id="meds-table-container">
-            <table>
-                
+    
+        <hr>
+            <table id="meds-table-container">
+
+             <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Count</th>
+                <th></th>
+                <th></th>
+            </thead>
             {{#rows}}
-                
+            <tbody> 
                 <tr>
                     <td>{{id}}</td>
                     <td id="med-name">{{name}}</td>
@@ -22,13 +30,12 @@
                     </td>
 
                     <td>
-                    <button id="yel">
                         <a href="/meds/edit/{{id}}">edit</a>
-                    </button>
                     </td>
                 </tr>
+            </tbody>
             {{/rows}}
             </table>
-        </div>
+        <hr>
     </body>
 </html>
