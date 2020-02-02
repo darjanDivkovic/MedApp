@@ -44,14 +44,14 @@ hr {
     font-weight: bold;
 }
 
-#meds-table-container > thead th,
+#meds-table-container > thead th {
+    padding: 8px 12px;
+}
+
 #meds-table-container > tbody td {
     padding: 2px 12px;
 }
 
-#meds-table-container > tbody tr:nth-of-type(even){
-    background-color: #f3f3f3;
-}
 
 #meds-table-container > tbody tr:last-of-type{
     border-bottom: 3px solid #009879;
