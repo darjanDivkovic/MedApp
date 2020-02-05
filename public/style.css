@@ -44,14 +44,16 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    line-height: 1.5em;
 }
 
 .showcase h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .showcase p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    line-height: 1.2em;
 }
 
 .showcase .btn {
