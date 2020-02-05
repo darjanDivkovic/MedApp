@@ -1,7 +1,6 @@
-h1 {
-   
+.menuwrap {
+    position: fixed;
 }
-
 
 .menu ul li {
     list-style: none;
