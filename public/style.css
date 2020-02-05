@@ -1,5 +1,6 @@
 :root {
     --green : #009879;
+    --opaqueGreen : rgba(0, 152, 121, 0.75);
     --blue : #2d5ff7;
     --red : #f56d58;
 }
@@ -56,24 +57,3 @@
     line-height: 1.2em;
 }
 
-.showcase .btn {
-
-    
-    width: 120px;
-    margin-top: 20px;
-    background-color: none;
-    border: 4px solid var(--blue);
-    border-radius: 4px;
-    font-weight: bolder;
-    padding: 5px;
-    color: var(--blue);
-    transition: 0.5s;
-    font-size: 1.5em;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.showcase .btn:hover {
-    background-color: var(--blue);
-    color: white;
-}
