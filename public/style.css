@@ -31,6 +31,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1;   
+}
+
+.showcase .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.showcase h1 {
+    font-size: 4rem;
+}
+
+.showcase p {
+    font-size: 1.5rem;
+}
+
+.showcase .btn {
+
     
+    width: 120px;
+    margin-top: 20px;
+    background-color: none;
+    border: 4px solid var(--blue);
+    border-radius: 4px;
+    font-weight: bolder;
+    padding: 5px;
+    color: var(--blue);
+    transition: 0.5s;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.showcase .btn:hover {
+    background-color: var(--blue);
+    color: white;
 }
